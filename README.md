@@ -20,7 +20,7 @@ This project documents the complete process of converting legacy 32-bit laptops 
 
 ## 🖼️ Gallery
 
-| HP Mini Server | Headless Setup | Web Interface |
+| Web Interface | Headless Setup | HP Mini Server |
 |----------------|----------------|---------------|
 | ![HP Mini](images/hp-mini-1.jpg) | ![Headless](images/hp-mini-2.jpg) | ![FileBrowser](images/hp-mini-3.jpg) |
 

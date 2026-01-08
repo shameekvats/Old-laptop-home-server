@@ -1,0 +1,19 @@
+# LightDM Auto-Login Configuration Example
+#
+# File: /etc/lightdm/lightdm.conf
+# Purpose: Enable automatic login on boot (no password prompt)
+#
+# Instructions:
+# 1. Copy this file to /etc/lightdm/lightdm.conf
+# 2. Replace 'adminq' with your actual username
+# 3. Restart: sudo systemctl restart lightdm
+
+[Seat:*]
+# Enable automatic login
+autologin-user=adminq
+autologin-user-timeout=0
+
+# Optional: Specify default session
+# autologin-session=xfce
+
+# Additional LightDM settings can go here

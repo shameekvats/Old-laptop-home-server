@@ -1,0 +1,20 @@
+# rc.local - WiFi Enable on Boot
+#
+# File: /etc/rc.local
+# Purpose: Enable WiFi radio on boot (fixes BCM4312 issue)
+#
+# Instructions:
+# 1. Create file: sudo nano /etc/rc.local
+# 2. Copy content below
+# 3. Make executable: sudo chmod +x /etc/rc.local
+# 4. Create systemd service (see rc-local.service.example)
+
+#!/bin/bash
+# Wait for system initialization
+sleep 15
+
+# Enable WiFi radio
+/usr/bin/nmcli radio wifi on
+
+# Exit successfully
+exit 0

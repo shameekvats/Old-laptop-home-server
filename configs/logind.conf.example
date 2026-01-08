@@ -1,0 +1,18 @@
+# Systemd Logind Configuration Example
+#
+# File: /etc/systemd/logind.conf
+# Purpose: Prevent system suspend when lid is closed
+#
+# Instructions:
+# 1. Edit: sudo nano /etc/systemd/logind.conf
+# 2. Uncomment and set these values to 'ignore'
+# 3. Apply: sudo systemctl restart systemd-logind
+
+[Login]
+# Handle lid close events
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+HandleLidSwitchDocked=ignore
+
+# Optional: Handle power button
+# HandlePowerKey=poweroff

@@ -1,0 +1,72 @@
+# HP Mini Server Project - Git Ignore File
+
+# Sensitive Information
+**/credentials.txt
+**/passwords.txt
+**/*-reference.md
+*-reference.md
+
+# Personal documentation with real IPs, passwords, and network details
+hp-mini-recovery-progress.md
+hp-mini-setup-reference.md
+
+# Internal project documentation (not for public repo)
+PRE-PUBLICATION-CHECKLIST.md
+GITHUB-SETUP.md
+
+# Personal Configuration Files (may contain IPs, usernames)
+config/personal/
+
+# System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+
+# Editor Files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temporary Files
+*.tmp
+*.bak
+*.log
+
+# Private Notes
+notes/
+private/
+personal/
+
+# SSH Keys
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Database Files (may contain user data)
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup Files
+*.backup
+backup/
+
+# MacOS Specific
+.Spotlight-V100
+.Trashes
+.fseventsd
+.VolumeIcon.icns
+
+# Images (original HEIC format - converted versions will be committed)
+*.heic
+*.HEIC
+
+# 3D Print Source Files (if you want to keep originals private)
+# Uncomment if needed:
+# *.step
+# *.STEP

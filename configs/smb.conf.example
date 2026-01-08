@@ -1,0 +1,31 @@
+# Samba Configuration Example
+#
+# File: /etc/samba/smb.conf
+# Purpose: Share /home/shared folder via SMB/CIFS
+#
+# Instructions:
+# 1. Backup original: sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.backup
+# 2. Edit: sudo nano /etc/samba/smb.conf
+# 3. Add this section at the end
+# 4. Replace 'adminq' with your username
+# 5. Set Samba password: sudo smbpasswd -a adminq
+# 6. Restart: sudo systemctl restart smbd nmbd
+
+[global]
+   workgroup = WORKGROUP
+   server string = HP Mini Server
+   security = user
+   map to guest = never
+
+[HPMini-Files]
+   comment = HP Mini Shared Files
+   path = /home/shared
+   browseable = yes
+   read only = no
+   writable = yes
+   guest ok = no
+   valid users = adminq
+   create mask = 0775
+   directory mask = 0775
+   force user = adminq
+   force group = adminq
